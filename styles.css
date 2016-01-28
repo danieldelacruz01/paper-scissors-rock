@@ -1,0 +1,18 @@
+/*Layout*/
+#main {
+  margin-top: 25px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#computer {
+  float: left;
+  width: 50%;
+  /*background:#9c9;*/
+}
+
+#player {
+  float: right;
+  width: 50%;
+  /*background:#c9c;*/
+}
