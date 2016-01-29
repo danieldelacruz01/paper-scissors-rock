@@ -19,11 +19,13 @@
 
 #user_controls {
   margin-left: 50%;
+  position: relative;
 }
 
 
 #computer_image{
   transform: scaleX(-1);
+  position: relative;
 }
 
 button {

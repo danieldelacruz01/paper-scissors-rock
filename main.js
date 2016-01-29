@@ -12,14 +12,28 @@ var resetComputer = function(){
 
 var userChoice;
 var winner;
-var play = function(userChoice) {
+
+var newGame = function(){
+    $("#user_image").attr("src","images/fist.png");
+    $("#computer_image").attr("src","images/fist.png")  
     resetComputer();
+    $("#user_controls").show();
+    $("#result").hide();
+
+
+}
+
+var play = function(userChoice) {
+    
     compare(userChoice, computerChoice);
 
-    document.getElementById("user_image").src = "images/" + userChoice + ".png";
-    document.getElementById("computer_image").src = "images/" + computerChoice + ".png";
+    $("#user_image").attr("src","images/" + userChoice + ".png");
+    $("#computer_image").attr("src","images/" + computerChoice + ".png");
 
-    document.getElementById("winner").innerHTML = winner + " - Play Again?";
+    document.getElementById("winner").innerHTML = winner;
+    
+    $("#user_controls").hide();
+    $("#result").show();
 }
 
 
