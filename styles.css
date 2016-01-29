@@ -8,11 +8,11 @@
   margin-right: 0;
 }
 
-#computer_image{
+#computer_image{  /*flip computer image along x axis*/
   transform: scaleX(-1);
 }
 
-#result{
+#result{  /*hide result div by default*/
   display: none;
 }
 
