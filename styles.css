@@ -28,6 +28,7 @@
 
 #result{
   display: none;
+  float: center;
 }
 
 button {
