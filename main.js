@@ -30,6 +30,9 @@ var newGame = function(){
 var play = function(userChoice) {
     resetComputer(); //reassign random choice to computer
     compare(userChoice, computerChoice);
+    $("#computer_image").hide();
+    $("#user_image").hide();
+
     $("#user_image").removeClass("animated"); //stop animation
     $("#computer_image").removeClass("animated"); //stop animation
     $("#user_image").attr("src", "images/" + userChoice + ".png"); //change img src according to userChoice
@@ -39,6 +42,8 @@ var play = function(userChoice) {
     document.getElementById("score").innerHTML = computerWins + " - " + playerWins; //displayscore in score p element
     
     $("#user_controls").hide(); //hide control buttons
+    $("#computer_image").show();
+    $("#user_image").show();
     $("#result").show(); //show result div
 }
 
