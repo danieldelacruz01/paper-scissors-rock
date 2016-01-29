@@ -24,3 +24,27 @@ h3 {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+/*animations*/
+
+.animated {
+  -webkit-animation: animation 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation: animation 2s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animation {
+  0% {-webkit-transform: translateY(0);}
+  25% {-webkit-transform: translateY(40px);}
+  50% {-webkit-transform: translateY(-15px);} 
+  75% {-webkit-transform: translateY(40px);}
+  100% {-webkit-transform: translateY(0);}
+
+@keyframes animation {
+  0% {transform: translateY(0);}
+  25% {transform: translateY(40px);}
+  50% {transform: translateY(-15px);} 
+  75% {transform: translateY(40px);}
+  100% {transform: translateY(0);}
+

@@ -17,8 +17,10 @@ var resetComputer = function(){
 
 //set start state
 var newGame = function(){
-    $("#user_image").attr("src","images/fist.png");
-    $("#computer_image").attr("src","images/fist.png");
+    $("#user_image").attr("src","images/rightfist.png");
+    $("#computer_image").attr("src","images/leftfist.png");
+    $("#user_image").addClass("animated");
+    $("#computer_image").addClass("animated");
     $("#user_controls").show();
     $("#result").hide();
 }
@@ -26,6 +28,8 @@ var newGame = function(){
 var play = function(userChoice) {
     resetComputer(); //reassign random choice to computer
     compare(userChoice, computerChoice);
+    $("#user_image").removeClass("animated"); //stop animation
+    $("#computer_image").removeClass("animated"); //stop animation
     $("#user_image").attr("src", "images/" + userChoice + ".png"); //change img src according to userChoice
     $("#computer_image").attr("src", "images/" + computerChoice + ".png"); //change img src according to computerChoice
 
