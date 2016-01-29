@@ -26,6 +26,10 @@
   transform: scaleX(-1);
 }
 
+#result{
+  display: none;
+}
+
 button {
   display: inline;
 }

@@ -16,7 +16,6 @@ var winner;
 var newGame = function(){
     $("#user_image").attr("src","images/fist.png");
     $("#computer_image").attr("src","images/fist.png")
-
     $("#user_controls").show();
     $("#result").hide();
 
@@ -25,7 +24,6 @@ var newGame = function(){
 var play = function(userChoice) {
 
     resetComputer();
-    
     compare(userChoice, computerChoice);
 
     $("#user_image").attr("src", "images/" + userChoice + ".png");
