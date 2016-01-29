@@ -6,7 +6,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
 
   <!-- JavaScript -->
   <script src="main.js"></script>
@@ -14,29 +15,30 @@
 
 </head>
 <body>
-<div id="main">
-  <div>
-    <h1>Let's play Paper, Scissors, Rock</h1>
-    <h2>Show me what you've got</h2>
+  <div id="main">
+    <h1 class="center">Let's play Paper, Scissors, Rock</h1>
+    <hr>
+    <div class="twelve columns">
+      <div id="computer">
+        <h3>Computer</h3>
+        <img id="computer_image" src="images/fist.png">
+      </div>
+      <div id="user">
+        <h3>You</h3>
+        <img id="user_image" src="images/fist.png">
+      </div>
+    </div>
+      <div class="twelve columns">
+      <div id="user_controls" class="center">
+        <button onClick='play("paper")'>Paper</button>
+        <button onClick='play("scissors")'>Scissors</button>
+        <button onClick='play("rock");'>Rock</button>
+      </div>
+      <div id="result" class="center">
+        <p id="winner"></p>
+        <button onClick='newGame()'>Play Again?</button>
+      </div>
+    </div>
   </div>
-  <div id="computer">
-    <h3>Computer</h3>
-    <img id="computer_image" src="images/fist.png">
-  </div>
-  <div id="user">
-    <h3>You</h3>
-    <img id="user_image" src="images/fist.png">
-  </div>
-  <br>
-  <div id="user_controls">
-    <button onClick='play("paper")'>Paper</button>
-    <button onClick='play("scissors")'>Scissors</button>
-    <button onClick='play("rock");'>Rock</button>
-  </div>
-  <div id="result" class="center">
-    <p id="winner"></p>
-    <button onClick='newGame()'>Play Again?</button>
-  </div>
-</div>
 </body>
 </html>

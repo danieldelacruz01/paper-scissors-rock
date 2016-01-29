@@ -1,24 +1,11 @@
 /*Layout*/
-#main {
-  margin-top: 25px;
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
 #computer {
   float: left;
-  width: 50%;
-  /*background:#9c9;*/
 }
 
 #user {
   float: right;
-  width: 50%;
-  /*background:#c9c;*/
-}
-
-#user_controls {
-  margin-left: 50%;
+  margin-right: 0;
 }
 
 
@@ -30,11 +17,11 @@
   display: none;
 }
 
-button {
-  display: inline;
+.center{
   text-align: center;
 }
 
-.center{
-  text-align: center;
+#headings{
+  margin-top: 25px;
+  margin-left: 25px;
 }
