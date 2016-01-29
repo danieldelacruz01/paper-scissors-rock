@@ -30,6 +30,7 @@ var newGame = function(){
 var play = function(userChoice) {
     resetComputer(); //reassign random choice to computer
     compare(userChoice, computerChoice);
+    $("#computer_image").attr("src","images/rightfist.png");
     $("#user_image").removeClass("animated"); //stop animation
     $("#computer_image").removeClass("animated"); //stop animation
     $("#user_image").attr("src", "images/" + userChoice + ".png"); //change img src according to userChoice
