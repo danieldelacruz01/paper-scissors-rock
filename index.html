@@ -9,27 +9,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 
   <!-- JavaScript -->
-  <!-- <script src="main.js"></script> -->
+  <script src="main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 </head>
 <body>
 <div id="main">
   <div>
-    <h1>Let's play Rock, Paper Scissors</h1>
+    <h1>Let's play Rock, Paper, Scissors</h1>
     <h2>Show me what you've got</h2>
     
   </div>
   <div id="computer">
     <h3>Computer</h3>
-    <img id="choiceImage" src="http://placehold.it/300x300">
+    <img id="computer_image" src="http://placehold.it/300x300">
 
     
   </div>
-  <div id="player">
+  <div id="user">
     <h3>You</h3>
-    <img id="choiceImage" src="http://placehold.it/300x300">
-    
+    <img id="user_image" src="http://placehold.it/300x300">
+    <div id="user_controls">
+      <button onClick='play("rock")'>Rock</button>
+      <button onClick='play("paper")'>Paper</button>
+      <button onClick='play("scissors")'>Scissors</button><br>
+    </div>
+  </div>
+  <div>
+    <p id="winner"></p>
   </div>
 </div>
 </body>

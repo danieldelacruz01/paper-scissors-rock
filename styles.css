@@ -11,8 +11,12 @@
   /*background:#9c9;*/
 }
 
-#player {
+#user {
   float: right;
   width: 50%;
   /*background:#c9c;*/
+}
+
+button {
+  display: inline;
 }

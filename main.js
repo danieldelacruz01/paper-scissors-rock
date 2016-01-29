@@ -1,45 +1,57 @@
-var userChoice = prompt("Do you choose rock, paper or scissors?");
-var computerChoice = Math.random();
-if (computerChoice < 0.34) {
-  computerChoice = "rock";
-} else if(computerChoice <= 0.67) {
-  computerChoice = "paper";
-} else {
-  computerChoice = "scissors";
-} console.log("Computer: " + computerChoice);
+var computerChoice;
+var resetComputer = function(){
+    computerChoice = Math.random();
+    if (computerChoice < 0.34) {
+      computerChoice = "rock";
+    } else if(computerChoice <= 0.67) {
+      computerChoice = "paper";
+    } else {
+      computerChoice = "scissors";
+    } console.log("Computer: " + computerChoice);
+}
+
+var userChoice;
+var winner;
+var play = function(userChoice) {
+    resetComputer();
+    compare(userChoice, computerChoice);
+
+    document.getElementById("user_image").src = "images/" + userChoice + ".png";
+    document.getElementById("computer_image").src = "images/" + computerChoice + ".png";
+
+    document.getElementById("winner").innerHTML = winner + " - Play Again?";
+}
 
 
-var compare = function (choice1, choice2) {
+var compare = function(choice1, choice2) {
     if (choice1 === choice2) {
-        return ("The result is a tie!");  
+        winner = "It's a tie!"
     }
     else if (choice1 === "rock") {
         
         if (choice2 === "scissors") {
-            return ("rock wins");
+            winner = "You Win!"
         }
         else {
-            return ("paper wins");   
+            winner = "You Lose!"
         }
     }
     else if (choice1 === "paper") {
         
         if (choice2 === "rock") {
-            return ("paper wins");
+            winner = "You Win!"
         }
         else {
-            return ("scissors wins");   
+            winner = "You Lose!"
         }
     }
     else if (choice1 === "scissors") {
         
         if (choice2 === "paper") {
-            return ("scissors wins");
+            winner = "You Win!"
         }
         else {
-            return ("rock wins");   
+            winner = "You Lose!" 
         }
     }
 }
-
-compare (userChoice, computerChoice);
