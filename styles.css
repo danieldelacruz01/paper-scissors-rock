@@ -28,9 +28,13 @@
 
 #result{
   display: none;
-  float: center;
 }
 
 button {
   display: inline;
+  text-align: center;
+}
+
+.center{
+  text-align: center;
 }
