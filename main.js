@@ -15,27 +15,27 @@ var winner;
 
 var newGame = function(){
     $("#user_image").attr("src","images/fist.png");
-    $("#computer_image").attr("src","images/fist.png")  
-    resetComputer();
+    $("#computer_image").attr("src","images/fist.png")
+
     $("#user_controls").show();
     $("#result").hide();
-
 
 }
 
 var play = function(userChoice) {
+
+    resetComputer();
     
     compare(userChoice, computerChoice);
 
-    $("#user_image").attr("src","images/" + userChoice + ".png");
-    $("#computer_image").attr("src","images/" + computerChoice + ".png");
+    $("#user_image").attr("src", "images/" + userChoice + ".png");
+    $("#computer_image").attr("src", "images/" + computerChoice + ".png");
 
     document.getElementById("winner").innerHTML = winner;
     
     $("#user_controls").hide();
     $("#result").show();
 }
-
 
 var compare = function(choice1, choice2) {
     if (choice1 === choice2) {
