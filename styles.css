@@ -17,6 +17,15 @@
   /*background:#c9c;*/
 }
 
+#user_controls {
+  margin-left: 50%;
+}
+
+
+#computer_image{
+  transform: scaleX(-1);
+}
+
 button {
   display: inline;
 }
